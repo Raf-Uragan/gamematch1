@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="gamedb.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure pragmas query browser" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1568"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="games" custom_title="0" dock_id="2" table="4,5:maingames"/><table title="requirements" custom_title="0" dock_id="1" table="4,12:mainrequirements"/><dock_state state="000000ff00000000fd00000001000000020000053500000398fc0100000001fc00000000000005350000013b00fffffffa000000000100000002fb000000160064006f0063006b00420072006f00770073006500310100000000ffffffff0000013b00fffffffb000000160064006f0063006b00420072006f00770073006500320100000000ffffffff0000012e00ffffff000002790000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="game_genres" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="59"/><column index="2" value="60"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="games" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="35"/><column index="2" value="300"/><column index="3" value="300"/><column index="4" value="83"/><column index="5" value="42"/><column index="6" value="65"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="genres" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="35"/><column index="2" value="87"/><column index="3" value="105"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="requirements" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="59"/><column index="2" value="111"/><column index="3" value="151"/><column index="4" value="59"/><column index="5" value="118"/><column index="6" value="135"/><column index="7" value="120"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1*">-- ============================================
+-- ТРЕБОВАНИЯ ДЛЯ НОВЫХ ИГР (ID 248-307)
+-- ============================================
+
+-- ========== ACTION (248-257) ==========
+INSERT OR IGNORE INTO requirements (game_id, min_gpu, min_cpu, min_ram, recommended_gpu, recommended_cpu, recommended_ram) VALUES 
+    (248, 'GTX 1050 Ti', 'Intel i5-4460', 8, 'RTX 2060', 'Intel i7-8700', 16),
+    (249, 'GTX 960', 'Intel i5-3570K', 8, 'GTX 1070', 'Intel i7-4790', 16),
+    (250, 'GTX 1060', 'Intel i5-6500', 8, 'RTX 2070', 'Intel i7-9700K', 16),
+    (251, 'GTX 1050', 'Intel i5-3570K', 8, 'GTX 1060', 'Intel i7-4790', 16),
+    (252, 'Intel HD 4000', 'Intel Core 2 Duo', 4, 'GTX 660', 'Intel i5-2400', 8),
+    (253, 'GTX 960', 'Intel i5-3570K', 8, 'GTX 1060', 'Intel i7-4790', 16),
+    (254, 'GTX 960', 'Intel i5-3570K', 8, 'GTX 1070', 'Intel i7-8700', 16),
+    (255, 'GTX 1060', 'Intel i5-6500', 8, 'RTX 2060', 'Intel i7-9700K', 16),
+    (256, 'GTX 960', 'Intel i5-3570K', 8, 'GTX 1060', 'Intel i7-4790', 16),
+    (257, 'GTX 1060', 'Intel i5-6500', 8, 'RTX 2070', 'Intel i7-9700K', 16);
+
+-- ========== RPG (258-267) ==========
+INSERT OR IGNORE INTO requirements (game_id, min_gpu, min_cpu, min_ram, recommended_gpu, recommended_cpu, recommended_ram) VALUES 
+    (258, 'GTX 1050 Ti', 'Intel i5-4460', 8, 'GTX 1660', 'Intel i7-8700', 16),
+    (259, 'GTX 1060', 'Intel i5-8400', 8, 'RTX 2060', 'Intel i7-9700K', 16),
+    (260, 'Intel HD 4000', 'Intel Core 2 Duo', 4, 'GTX 660', 'Intel i5-2400', 8),
+    (261, 'Intel HD 4000', 'Intel Core 2 Duo', 4, 'GTX 660', 'Intel i5-2400', 8),
+    (262, 'GTX 1050 Ti', 'Intel i5-4460', 8, 'GTX 1660', 'Intel i7-8700', 16),
+    (263, 'GTX 960', 'Intel i5-3570K', 8, 'GTX 1060', 'Intel i7-4790', 16),
+    (264, 'GTX 960', 'Intel i5-3570K', 8, 'GTX 1060', 'Intel i7-4790', 16),
+    (265, 'GTX 960', 'Intel i5-3570K', 8, 'GTX 1060', 'Intel i7-4790', 16),
+    (266, 'GTX 950', 'Intel i5-2500K', 4, 'GTX 960', 'Intel i5-6600K', 8),
+    (267, 'GTX 750 Ti', 'Intel i5-2500K', 4, 'GTX 960', 'Intel i5-6600K', 8);
+
+-- ========== STRATEGY (268-277) ==========
+INSERT OR IGNORE INTO requirements (game_id, min_gpu, min_cpu, min_ram, recommended_gpu, recommended_cpu, recommended_ram) VALUES 
+    (268, 'GTX 970', 'Intel i5-4460', 8, 'GTX 1070', 'Intel i7-8700', 16),
+    (269, 'GTX 1050 Ti', 'Intel i5-4460', 8, 'GTX 1060', 'Intel i7-4790', 16),
+    (270, 'GTX 1060', 'Intel i5-6500', 8, 'RTX 2060', 'Intel i7-9700K', 16),
+    (271, 'GTX 970', 'Intel i5-4460', 8, 'RTX 2060', 'Intel i7-8700', 16),
+    (272, 'GTX 1060', 'Intel i5-6600K', 16, 'RTX 2070', 'Intel i7-9700K', 16),
+    (273, 'GTX 1050 Ti', 'Intel i5-4460', 8, 'GTX 1660', 'Intel i7-8700', 16),
+    (274, 'GTX 960', 'Intel i5-3570K', 8, 'GTX 1060', 'Intel i7-4790', 16),
+    (275, 'GTX 960', 'Intel i5-3570K', 8, 'GTX 1060', 'Intel i7-4790', 16),
+    (276, 'GTX 1060', 'Intel i5-6500', 8, 'RTX 2060', 'Intel i7-9700K', 16),
+    (277, 'GTX 970', 'Intel i5-4460', 8, 'GTX 1070', 'Intel i7-8700', 16);
+
+-- ========== INDIE (278-287) ==========
+INSERT OR IGNORE INTO requirements (game_id, min_gpu, min_cpu, min_ram, recommended_gpu, recommended_cpu, recommended_ram) VALUES 
+    (278, 'GTX 1060', 'Intel i5-6500', 8, 'RTX 2060', 'Intel i7-9700K', 16),
+    (279, 'GTX 950', 'Intel i5-3570K', 4, 'GTX 960', 'Intel i5-6600K', 8),
+    (280, 'GTX 960', 'Intel i5-3570K', 8, 'GTX 1060', 'Intel i7-4790', 16),
+    (281, 'Intel HD 4000', 'Intel Core 2 Duo', 4, 'GTX 660', 'Intel i5-2400', 8),
+    (282, 'GTX 960', 'Intel i5-3570K', 8, 'GTX 1060', 'Intel i7-4790', 16),
+    (283, 'GTX 950', 'Intel i5-2500K', 4, 'GTX 960', 'Intel i5-6600K', 8),
+    (284, 'GTX 960', 'Intel i5-3570K', 8, 'GTX 1060', 'Intel i7-4790', 16),
+    (285, 'Intel HD 4000', 'Intel Core 2 Duo', 4, 'GTX 660', 'Intel i5-2400', 8),
+    (286, 'GTX 950', 'Intel i5-2500K', 4, 'GTX 960', 'Intel i5-6600K', 8),
+    (287, 'GTX 960', 'Intel i5-3570K', 8, 'GTX 1060', 'Intel i7-4790', 16);
+
+-- ========== HORROR (288-297) ==========
+INSERT OR IGNORE INTO requirements (game_id, min_gpu, min_cpu, min_ram, recommended_gpu, recommended_cpu, recommended_ram) VALUES 
+    (288, 'GTX 1060', 'Intel i5-6500', 8, 'RTX 2060', 'Intel i7-9700K', 16),
+    (289, 'GTX 1060', 'Intel i5-6500', 8, 'RTX 2070', 'Intel i7-9700K', 16),
+    (290, 'GTX 960', 'Intel i5-3570K', 8, 'GTX 1060', 'Intel i7-4790', 16),
+    (291, 'GTX 1060', 'Intel i5-6500', 8, 'RTX 2060', 'Intel i7-9700K', 16),
+    (292, 'GTX 970', 'Intel i5-4460', 8, 'GTX 1070', 'Intel i7-8700', 16),
+    (293, 'GTX 1060', 'Intel i5-6500', 8, 'RTX 2060', 'Intel i7-9700K', 16),
+    (294, 'GTX 960', 'Intel i5-3570K', 8, 'GTX 1060', 'Intel i7-4790', 16),
+    (295, 'GTX 950', 'Intel i5-3570K', 4, 'GTX 960', 'Intel i5-6600K', 8),
+    (296, 'GTX 960', 'Intel i5-3570K', 8, 'GTX 1060', 'Intel i7-4790', 16),
+    (297, 'GTX 950', 'Intel i5-2500K', 4, 'GTX 960', 'Intel i5-6600K', 8);
+
+</sql><current_tab id="0"/></tab_sql></sqlb_project>
